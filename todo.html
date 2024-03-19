@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <div class="container">
+        <div class="inputs">
+            <input type="text" placeholder="Enter your task" id="text">
+            <button onclick="addBtn()">Add</button>
+            
+        </div>
+        <div id="displayData">
+
+        </div>
+    </div>
+    <script>
+      let showData = document.getElementById('text');
+      let displayData = document.getElementById('displayData');
+
+      addBtn=()=>{
+        let newElm = document.createElement("ul");
+        newElm.innerHTML = `${showData.value} <button>Del</button>`;
+        displayData.appendChild(newElm);
+        newElm.querySelector("button").addEventListener('click', remove)
+        showData.value = "";
+        function remove(){
+            newElm.remove();
+        }
+      }
+    </script>
+</body>
+
+</html>

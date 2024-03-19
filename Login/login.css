@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url('../img/n3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 335px;
+    height: 55vh;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* background-color: aliceblue; */
+    border: 2px solid #a75353;
+    border-radius: 7px;
+    background-color: transparent;
+    opacity: 0.9;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.inp {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    width: 255px;
+    background-color: transparent;
+    /* background-color: rgb(229, 224, 233); */
+    border-bottom: 1px solid black;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    margin: 7px;
+    font-size: 15px;
+    color:black;
+    background-color: transparent;
+}
+
+.remember-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.remember-details p a{
+    color: #fff;
+}
+.btn {
+    margin: 17px auto;
+}
+
+.btn button {
+    padding: 7px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e1e1e;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #1e1e1e;
+    background-color: transparent;
+}

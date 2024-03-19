@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .showData{
+            margin-top: 45px;
+            text-align: center;
+        }
+
+        .displayData{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <h1>Todo app</h1>
+        <div class="showData">
+            <input type="text" id="list" placeholder="enter list">
+            <button onclick="addData()">Add</button>
+        </div>
+        <div class="displayData">
+
+        </div>
+    </div>
+    <script>
+
+        let showList = document.querySelector("#list");
+        let displayData = document.querySelector(".displayData");
+
+        addData=()=>{
+            let newElm = document.createElement("ul");
+            console.log(newElm)
+        
+            newElm.innerHTML = `${showList.value} <button>Del</button> `;
+            displayData.appendChild(newElm);
+            showList.value = "";
+            newElm.querySelector("button").addEventListener("click", remove);
+            function remove(){
+                newElm.remove();
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
